@@ -1,0 +1,13 @@
+body {
+    background-color: floralwhite;
+}
+.mainbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.inside {
+    display: flex;
+    background-color: lightgrey;
+}
+
