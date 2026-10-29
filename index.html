@@ -8,28 +8,41 @@
     <title>gameboy-squishy</title>
   </head>
   <body>
-    <header>
-        <h1>Game Boy Squishy</h1>
-    </header>
+    <div class="status">
+        <div class="status-section-left">
+            <div class="status-box-left">
+            <h1 id="game-title">Game Title</h1>
+            <p id="game-description">This will be a game description and stuff you know lowkey kinda sick awesome. The quick brown fox jumps over the lazy dog. Yeah. Pack my box with five dozen liquor jugs. Jackdaws love my big sphinx of quartz.</p>
+            </div>
+        </div>
 
-    <form>
-        <p>
-            <input id="search-bar" type="search" name="search-bar" placeholder="search.."">
-        </p>
-        <select id="genre-filter">
-            <option selected="selected" value="none">None</option>
-            <option value="virtual-pet">Virtual Pet</option>
-            <option value="wholesome">Wholesome</option>
-            <option value="puzzle">Puzzle</option>
-            <option value="top-down">Top-Down</option>  
-            <option value="visual-novel">Visual Novel</option>
-            <option value="sidescroller">Sidescroller</option>
-            <option value="platformer">Platformer</option>
-            <option value="rpg">RPG</option>
-            <option value="farming">Farming</option>
-            <option value="horror">Horror</option>
-        </select>
-    </form>
+        <div class="status-section-right">
+            <div class="title">
+            <h1>GAME BOY SQUISHY</h1>
+            </div>
+            <div class="status-box-right">
+            <p>
+                <input id="search-bar" type="search" name="search-bar" placeholder="search.."">
+            </p>
+            <form style="width: fit-content;">
+                <select id="genre-filter">
+                    <option selected="selected" value="none">None</option>
+                    <option value="virtual-pet">Virtual Pet</option>
+                    <option value="wholesome">Wholesome</option>
+                    <option value="puzzle">Puzzle</option>
+                    <option value="top-down">Top-Down</option>  
+                    <option value="visual-novel">Visual Novel</option>
+                    <option value="sidescroller">Sidescroller</option>
+                    <option value="platformer">Platformer</option>
+                    <option value="rpg">RPG</option>
+                    <option value="farming">Farming</option>
+                    <option value="horror">Horror</option>
+                </select>
+            </form>
+            </div>
+        </div>
+    </div>
+
     <div class="overview" id="overview">
         <!-- Put all the games in here -->
     </div>

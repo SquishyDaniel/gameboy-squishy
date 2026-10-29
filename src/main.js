@@ -7,7 +7,9 @@ let game_list = [];
 const overview_element = document.querySelector("#overview");
 const search_element = document.querySelector("#search-bar");
 const selection_element = document.querySelector("#genre-filter");
-const canvas_element = document.querySelector("canvas");
+const canvas_element = document.querySelector("#wasmboy");
+const game_title_element = document.querySelector("#game-title");
+const game_description_element = document.querySelector("#game-description");
 
 const wasmboy_options = {
   headless: false,
@@ -90,8 +92,13 @@ async function create_game_overview(filtered_game_list) {
 
     var charElems = document.getElementsByClassName("char");
 
+    // Play the game >B)
     new_button.addEventListener("click", async function () {
       console.log(this.id);
+
+      game_title_element.textContent = filtered_game_list[game].name;
+      game_description_element.textContent = filtered_game_list[game].description;
+
       await WasmBoy.loadROM(games[this.id]["rom"]);
       await WasmBoy.play();
       await WasmBoy.resumeAudioContext();
@@ -146,7 +153,6 @@ async function filter_with_selector(on_select_event) {
   return game_list_filtered;
 }
 
-async function play(on_click_event) {}
 
 async function initialize() {
   search_element.addEventListener("input", filter_with_search);
@@ -154,7 +160,6 @@ async function initialize() {
 
   WasmBoy.config(wasmboy_options, canvas_element).then(() => {
     console.log("WasmBoy is now configured, yay!");
-    play_button_element.addEventListener("click", play);
   });
 
   get_games();
