@@ -96,8 +96,8 @@ async function create_game_overview(filtered_game_list) {
     new_button.addEventListener("click", async function () {
       console.log(this.id);
 
-      game_title_element.textContent = filtered_game_list[game].name;
-      game_description_element.textContent = filtered_game_list[game].description;
+      game_title_element.textContent = games[this.id]["name"];
+      game_description_element.textContent = games[this.id]["description"];
 
       await WasmBoy.loadROM(games[this.id]["rom"]);
       await WasmBoy.play();
