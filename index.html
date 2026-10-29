@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="./src/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gameboy-squishy</title>
   </head>
@@ -10,9 +11,7 @@
     <header>
         <h1>Game Boy Squishy</h1>
     </header>
-    <div id="app">
-     <canvas id="wasmboy" style="image-rendering: pixelated;"></canvas>
-    </div>
+
     <form>
         <p>
             <input id="search-bar" type="search" name="search-bar" placeholder="search.."">
@@ -22,7 +21,7 @@
             <option value="virtual-pet">Virtual Pet</option>
             <option value="wholesome">Wholesome</option>
             <option value="puzzle">Puzzle</option>
-            <option value="top-down">Top-Down</option>
+            <option value="top-down">Top-Down</option>  
             <option value="visual-novel">Visual Novel</option>
             <option value="sidescroller">Sidescroller</option>
             <option value="platformer">Platformer</option>
@@ -31,14 +30,12 @@
             <option value="horror">Horror</option>
         </select>
     </form>
-    <div id="overview">
+    <div class="overview" id="overview">
         <!-- Put all the games in here -->
     </div>
 
-    <div class="mainbox">
-        <div class="inside">
-
-        </div>
+    <div id="app">
+     <canvas id="wasmboy" style="image-rendering: pixelated;"></canvas>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
