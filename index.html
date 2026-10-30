@@ -10,7 +10,7 @@
   <body>
     <div class="status">
         <div class="status-section-left">
-            <div class="status-box-left">
+            <div class="status-box-left" id="status-box-left">
             <h1 id="game-title">Game Title</h1>
             <p id="game-description">This will be a game description and stuff you know lowkey kinda sick awesome. The quick brown fox jumps over the lazy dog. Yeah. Pack my box with five dozen liquor jugs. Jackdaws love my big sphinx of quartz.</p>
             </div>
@@ -47,9 +47,15 @@
         <!-- Put all the games in here -->
     </div>
 
-    <div id="app">
-     <canvas id="wasmboy" style="image-rendering: pixelated;"></canvas>
+    <div id="overlay" class="overlay">
+        <div class="app" id="app">
+        <canvas class="wasmboy" id="wasmboy" style="image-rendering: pixelated;"></canvas>
+        </div>
+        <div>
+            <button id="quit-button"><p class="button-label">QUIT</p></button>
+        </div>
     </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
